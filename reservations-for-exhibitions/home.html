@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <style>
+    html, body {    /* 해상도, 서체 설정 */
+    	width : 480px;
+    	height : 800px;
+        margin : 0px;
+    	font-family : "-윤고딕320", "맑은고딕", Sans-Serif;
+        background-color : white;
+
+    }
+    .ticket {   /* 모바일 티켓 버튼, 모바일 티켓 페이지로 이동*/
+        width : 45px;
+        height : 45px;
+        float : right;
+        position : relative;
+        right : 53px;
+        bottom : 9px;
+    }
+    .search {   /* 검색 버튼 */
+        width : 25px;
+        height : 25px;
+        float : right;
+        position : relative;
+        right : 45px;
+    }
+    .m {    /* 링크 방문 후 등 변화 없애기 */
+        text-decoration : none;
+        color : gray;
+    }
+    .i {    /* 링크 방문 후 등 변화 없애기 */
+        text-decoration : none;
+        color : black;
+    }
+    .div1 {     /* 예술의 전당 타이틀 */
+        margin : 31px 0px 27px 0px;
+        width : 480px;
+    	color : #9055A2;
+    	font-weight : bold;
+    	text-align : center;
+        padding : 3px;
+    	font-size : 23px;
+        position : relative;
+        left : 32px;
+    }
+    .div2 {     /* 메뉴 탭 */
+    	display : inline-block;
+    	width : 115px;
+        height : 50px;
+    	text-align : center;
+        font-size : 18px;
+    	color : gray;
+        padding-top : 7px;
+    	padding-bottom : 0px;
+        position : relative;
+        top : 10px;
+    }
+    .triangle {     /* 해당 메뉴 페이지 표시 아이콘 */
+        width : 10px;
+        height : 10px;
+        margin : 0px;
+        padding : 0px;
+        position : relative;
+        left : 52px;
+        top : 5px;
+    }
+    .f {    /*해당 페이지 표시 색*/
+        color : #90247C;
+    }  
+    .ma {       /* 화면 여백 표시 */
+        background-color : #F2F2F2;
+        height : 10px;
+        margin-top : 0px;
+        padding-top : 0px;
+    }
+    .div3 {     /* 작품 정보 왼쪽 정렬 */
+    	width : 240px;
+    	height : 240px;
+    	padding : 0px;
+    	margin : 0px;
+    	border-width : 0px;
+    	float : left;
+    }
+    .div4 {     /* 작품 정보 오른쪽 정렬 */
+    	width : 240px;
+    	height : 240px;
+    	padding : 0px;
+    	margin : 0px;
+    	border-width : 0px;
+    	float : right;
+    }
+    img {
+    	 width : 240px; height : 240px;
+    }
+    .title {        /* 전시회명 */
+        font-size : 21px;
+        margin-top : 10px;
+        margin-left : 12px;
+    }
+    .title2 {
+        font-size : 21px;
+        margin-top : 30px;
+        margin-left : 12px;
+    }
+    .where {        /* 전시회 장소 */
+        font-size : 18px;
+        color : rgb(89, 89, 89);
+        margin-bottom : 0px;
+        margin-left : 12px;
+    }
+    .when {     /* 전시회 기간 */
+        font-size : 17px;
+        color : rgb(166, 166, 166);
+        margin-top : 0px;
+        margin-left : 12px;
+    }
+     #slideshow {
+    overflow: hidden;
+    height: 240px;
+    width: 240px;
+    margin: 0 auto;
+    }
+    .slide-wrapper {
+    width: 720px;
+    animation: slide 18s ease infinite;
+    }
+    /*르누아르 슬라이드*/
+    .slide1 {
+    float: left;
+    height: 240px;
+    width: 240px;
+    }
+    .slide1:nth-child(1) {
+    background-image : url("media/renoir.png");
+    background-repeat : no-repeat;
+    }
+    .slide1:nth-child(2) {
+    background-image : url("media/renoir3.png");
+    background-repeat : no-repeat;
+    }
+    .slide1:nth-child(3) {
+    background-image : url("media/renoir.png");
+    background-repeat : no-repeat;
+    }
+    /*어린왕자 슬라이드*/
+    .slide2 {
+    float: left;
+    height: 240px;
+    width: 240px;
+    }
+    .slide2:nth-child(1) {
+    background-image : url("media/prince.png");
+    background-repeat : no-repeat;
+    }
+    .slide2:nth-child(2) {
+    background-image : url("media/prince3.png");
+    background-repeat : no-repeat;
+    }
+    .slide2:nth-child(3) {
+    background-image : url("media/prince.png");
+    background-repeat : no-repeat;
+    }
+    /*고흐 슬라이드*/
+    .slide3 {
+    float: left;
+    height: 240px;
+    width: 240px;
+    }
+    .slide3:nth-child(1) {
+    background-image : url("media/gogh.png");
+    background-repeat : no-repeat;
+
+    }
+    .slide3:nth-child(2) {
+    background-image : url("media/gogh2.png");
+    background-repeat : no-repeat;
+    }
+    .slide3:nth-child(3) {
+    background-image : url("media/gogh.png");
+    background-repeat : no-repeat;
+    }
+    @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -240px;}
+    70% {margin-left: -240px;}
+    80% {margin-left: -480px;}
+    100% {margin-left: -480px;}
+    }
+    .lo1 {
+        position : relative;
+        right : 120px;
+    }
+    .lo2 {
+        position : relative;
+        bottom : 240px;
+    }
+    .lo3 {
+        position : relative;
+        bottom : 240px;
+        left : 240px;
+    }
+    .fix1 {
+        position : fixed;
+        background : white;
+        top : -4px;
+        left :-3px;
+    }
+    .fix2 {
+        width : 480px;
+        position : fixed;
+        background : white;
+        top : 75px;
+        z-index : 8;
+    }
+    .fix3 {
+        position : fixed;
+        background : white;
+        top : 126px;
+        z-index : 10;
+    }
+    .white {       /* 상단 메뉴 고정으로 인해 가려진 부위 드러내기 위해 공간을 줌 */
+        height : 136px;
+        background-color : white;
+     }
+    </style>
+</head>
+<body>
+    <div class="fix1">
+        <div class="div1">
+	       	예술의 전당
+            <img src="media/search2.png" class="search" alt="검색하기">
+            <a href = "ticket.html">
+                <img src="media/ticket.png" class="ticket" alt="모바일 티켓">
+            </a>
+	    </div>
+    </div>
+	<div class="fix2">
+		<div class="div2 f">홈<br></div>
+		<div class="div2">피드</div>
+		<div class="div2">이벤트</div>
+		<a href = "media/my.html" class="m">
+            <div class="div2">
+            MY
+            </div>
+        </a>
+	</div>
+    <img src="media/triangle.png" class="triangle fix3" alt="해당 메뉴 페이지">
+    <div class="white">
+    </div>
+	<div class="ma">
+	</div>
+    <a href="info.html" class="i">
+	<div>
+		<div class="div3">
+			<br><p class="title">르누아르<br>&nbsp;: 여인의 향기</p>
+			<br><br><p class="where">본다빈치뮤지엄 서울숲</p>
+            <p class="when">Until 2019.04.28</p>
+		</div>
+	    <div id="slideshow">
+            <div class="slide-wrapper">
+                <div class="slide1">
+                </div>
+                <div class="slide1">
+                </div>
+                <div class="slide1">
+                </div>
+            </div>
+        </div>
+	</div>
+    </a>
+    <a href="media/info_prince.html" class="i">
+	<div>
+        <div id="slideshow" class="lo1">
+            <div class="slide-wrapper">
+                <div class="slide2">
+                </div>
+                <div class="slide2">
+                </div>
+                <div class="slide2">
+                </div>
+            </div>
+        </div>
+        <div class="div4 lo2">
+            <br><p class="title2">나의 어린왕자에게</p>
+            <br><br><p class="where">K 현대미술관</p>
+            <p class="when">Until 2019.06.02</p>
+        </div>
+        </a>
+	<div class="div3">
+        <div class="div3">
+            <br><p class="title2">러빙빈센트展</p>
+            <br><br><p class="where">M 컨템포러리 아트센터</p>
+            <p class="when">Until 2019.03.03</p> 
+        </div>
+        <div id="slideshow" class="lo3">
+            <div class="slide-wrapper">
+                <div class="slide3">
+                </div>
+                <div class="slide3">
+                </div>
+                <div class="slide3">
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mobile ticket</title>
+    <style>
+    html, body {
+    	width : 480px;
+    	height : 800px;
+        margin : 0px;
+    	font-family : "-윤고딕320", "맑은고딕", Sans-Serif;
+        background-color : white;
+    }
+    div div {
+        display : inline-block;
+    }
+    .x {    /* 닫기 버튼 */
+        position : relative;
+        right : 7px;
+        width : 60px;
+        height : 60px;
+
+    }
+    .title {    /* 해당 페이지 타이틀 */
+        width : 120px;
+        height : 40px;
+        font-size : 21px;
+        position : relative;
+        right : 15px;
+        bottom : 24px;
+    }
+    .icon {
+        width : 30px;
+        height : 30px;
+        margin-left : 30px;
+        position : relative;
+        bottom : 15px;
+        left : 30px;
+    }
+    .icont {    /* 아이콘 옆 버튼명 */
+        width : 80px;
+        height : 30px;
+        font-size : 20px;
+        margin-left : 10px;
+        position : relative;
+        left : 30px;
+        bottom : 24px;
+    }
+    .p1 {       /* 해당 전시회 포스터 */
+        width : 480px;
+        position : relative;
+        bottom : 10px;
+    }
+    p {     /* 전시회명 */
+        font-size : 26px;
+        text-align : center;
+        margin-top : 4px;
+        margin-bottom : 4px;
+        color : #5D5D5D;
+    }
+    h3 {    /* 장소 */
+        text-align : center;
+        margin-top : 7px;
+        margin-bottom : 0px;
+        color : #BDBDBD;
+        font-size : 20px;
+    }
+    .center {   /* 센터 적용 */
+        text-align : center;
+    }
+    .qr {   /* QR 코드로 티켓 출력 또는 인증 */
+        width : 220px;
+    }
+    .t1 {   /* 날짜 */
+        text-align : center;
+        color : #686868;
+        font-size : 24px;
+        margin-top : 30px;
+    }
+    .p2 {   /* 연령대 */
+        margin : 35px 20px 5px 20px;
+    }
+    @keyframes play {   /* 캡처된 티켓이 아니라는 것을 증명하기 위해 움직임을 줌 */
+        0% { background-color : #781E67; }
+        20% { background-color : #90247C; }
+        40% { background-color : #9055A2; }
+        60% { background-color : #A66698; }
+        80% { background-color : #CBA6C3; }
+        100% { background-color : #D9D9D9; }
+    }
+    .play1 {    /* 0초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;   /* 모서리 둥글게 하기 */
+        animation : play 6s 0s linear infinite normal;
+
+    }
+    .play2 {    /* 1초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;
+        animation : play 6s 1s linear infinite normal;
+    }
+    .play3 {    /* 2초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;
+        animation : play 6s 2s linear infinite normal;
+    }
+    .play4 {    /* 3초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;
+        animation : play 6s 3s linear infinite normal;
+    }
+    .play5 {    /* 4초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;
+        animation : play 6s 4s linear infinite normal;
+    }
+    .play6 {    /* 5초 후 시작 */
+        width : 60px;
+        height : 7px;
+        border-radius : 10px;
+        animation : play 6s 5s linear infinite normal;
+    }
+    .bar1 {     /* 해당하는 연령 표시 */
+        width : 67px;
+        height : 7px;
+        background-color : purple;
+        border-radius : 10px;
+    }
+    .bar2 {
+        width : 67px;
+        height : 7px;
+        border-radius : 10px;
+        background-color : #D9D9D9;
+        margin-left : 18px;
+    }
+
+</style>
+</head>
+<body>
+    <div>
+        <div>
+            <a href="home.html">
+            <img src="media/x.png" class="x" alt="닫기">
+            </a>
+        </div>
+        <div class="title">
+            모바일 티켓
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="media/garbage.png" class="icon" alt="예매취소">
+        </div>
+        <div class="icont">
+            예매취소
+        </div>
+        <div>
+            <img src="media/line2.png" class="icon" alt="중심 선">
+        </div>
+        <div>
+            <img src="media/share3.png" class="icon" alt="공유하기">
+        </div>
+        <div class="icont">
+            공유하기
+        </div>
+    </div>
+    <a href="info.html">
+    <div>
+        <img src="media/p5.png" class="p1" alt="르누아르 전시회 포스터">
+    </div>
+    </a>
+    <p>
+        르누아르 : 여인의 향기
+    </p>
+    <h3>
+        본다빈치뮤지엄 서울숲
+    </h3>
+    <div class="center">
+        <img src="media/qr2.png" class="qr" alt="티켓 큐알코드">
+    </div>
+    <div class="center">
+        <div class="play1">
+        </div>
+        <div class="play2">
+        </div>
+        <div class="play3">
+        </div>
+        <div class="play4">
+        </div>
+        <div class="play5">
+        </div>
+        <div class="play6">
+        </div>
+    </div>
+    <div class="t1">
+        2019-05-29 (화)
+    </div>
+    <div class="center">
+        <div class="p2">
+            일반 2
+        </div>
+        <div class="p2">
+            청소년
+        </div>
+        <div class="p2">
+            어린이
+        </div>
+    </div>
+    <div class="center">
+        <div class="bar1">
+        </div>
+        <div class="bar2">
+        </div>
+        <div class="bar2">
+        </div>
+    </div>
+</body>
+</html>
