@@ -1,2 +1,3 @@
 # reservations-for-exhibitions
-![image](https://user-images.githubusercontent.com/79898245/138383665-5d7adccb-3e03-42ee-97be-756d295a4a1d.png)
+
+![Group 15](https://user-images.githubusercontent.com/79898245/138383733-439c0321-17ff-446b-98ef-c266900cea4c.png)
